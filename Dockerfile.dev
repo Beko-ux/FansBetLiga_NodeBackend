@@ -1,0 +1,24 @@
+FROM node:20-slim
+
+# wget + openssl pour Prisma
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends wget openssl \
+ && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+# 1) Copie des manifests + PRISMA AVANT l'install (pour que le postinstall puisse lire schema.prisma)
+COPY package*.json ./
+COPY prisma ./prisma
+
+# 2) Install (déclenche postinstall: prisma generate)
+RUN npm install
+
+# 3) Puis le reste du code
+COPY . .
+
+EXPOSE 3000
+ENV CHOKIDAR_USEPOLLING=1
+ENV WATCHPACK_POLLING=true
+
+CMD ["npm", "run", "dev"]

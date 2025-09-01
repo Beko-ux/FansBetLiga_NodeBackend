@@ -1,0 +1,18 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: prediction-backend-node-dev
+    ports:
+      - "3000:3000"
+    env_file: .env
+    volumes:
+      - ./:/app              # bind mount → hot-reload
+      - /app/node_modules    # garde node_modules dans le conteneur
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000/"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    restart: unless-stopped
