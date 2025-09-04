@@ -1,20 +1,25 @@
-# Utilise une image Node officielle
 FROM node:18
 
-# Crée et définit le dossier de travail
 WORKDIR /app
 
-# Copie package.json et package-lock.json
+# Copier les fichiers de dépendances
 COPY package*.json ./
 
-# Installe les dépendances
+# Copier le dossier prisma avant npm install
+COPY prisma ./prisma/
+
+# Installer les dépendances
 RUN npm install
 
-# Copie tout le code
+# Copier le reste de l'application
 COPY . .
 
-# Expose le port défini dans ton .env
+# Générer le client Prisma
+RUN npx prisma generate
+
+# Construire l'application si nécessaire
+RUN npm run build
+
 EXPOSE 3000
 
-# Démarre ton app
 CMD ["npm", "start"]
