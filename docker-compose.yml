@@ -5,11 +5,11 @@ services:
       dockerfile: Dockerfile.dev
     container_name: prediction-backend-node-dev
     ports:
-      - "3000:3000"
+      - "3002:3000"  # Changez le premier port (3001) selon vos besoins
     env_file: .env
     volumes:
-      - ./:/app              # bind mount → hot-reload
-      - /app/node_modules    # garde node_modules dans le conteneur
+      - ./:/app
+      - /app/node_modules
     healthcheck:
       test: ["CMD", "wget", "-qO-", "http://localhost:3000/"]
       interval: 10s
