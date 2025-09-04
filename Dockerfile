@@ -17,9 +17,6 @@ COPY . .
 # Générer le client Prisma
 RUN npx prisma generate
 
-# Construire l'application si nécessaire
-RUN npm run build
-
 EXPOSE 3000
 
 CMD ["npm", "start"]
