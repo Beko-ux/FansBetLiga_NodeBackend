@@ -1,3 +1,23 @@
+# services:
+#   api:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile.dev
+#     container_name: prediction-backend-node-dev
+#     ports:
+#       - "3005:3000"  # Changez le premier port (3001) selon vos besoins
+#     env_file: .env
+#     volumes:
+#       - ./:/app
+#       - /app/node_modules
+#     healthcheck:
+#       test: ["CMD", "wget", "-qO-", "http://localhost:3000/"]
+#       interval: 10s
+#       timeout: 3s
+#       retries: 5
+#     restart: unless-stopped
+
+
 services:
   api:
     build:
@@ -5,8 +25,13 @@ services:
       dockerfile: Dockerfile.dev
     container_name: prediction-backend-node-dev
     ports:
-      - "3005:3000"  # Changez le premier port (3001) selon vos besoins
+      - "3005:3000"
     env_file: .env
+    environment:
+      - NODE_ENV=production
+      - JWT_SECRET=${JWT_SECRET}
+      - DATABASE_URL=${DATABASE_URL}
+      - PORT=3000
     volumes:
       - ./:/app
       - /app/node_modules
