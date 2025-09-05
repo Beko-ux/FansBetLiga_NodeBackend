@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile.dev
     container_name: prediction-backend-node-dev
     ports:
-      - "3002:3000"  # Changez le premier port (3001) selon vos besoins
+      - "3005:3000"  # Changez le premier port (3001) selon vos besoins
     env_file: .env
     volumes:
       - ./:/app
