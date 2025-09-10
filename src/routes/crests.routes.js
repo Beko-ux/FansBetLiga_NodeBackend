@@ -1,34 +1,28 @@
-// src/routes/crests.routes.js
 import { Router } from 'express';
 import axios from 'axios';
 
 const r = Router();
 
-// Proxy simple par ID de fichier: /api/crests/86.png ou /api/crests/760.svg
+// /api/crests/86.png  ou /api/crests/760.svg
 r.get('/:filename', async (req, res) => {
   try {
     const { filename } = req.params;
-    // petite whitelist
     if (!/^[0-9a-zA-Z._-]+$/.test(filename)) {
       return res.status(400).json({ error: 'Bad filename' });
     }
-
     const upstream = `https://crests.football-data.org/${filename}`;
     const upstreamRes = await axios.get(upstream, { responseType: 'arraybuffer' });
 
-    const contentType = upstreamRes.headers['content-type'] || 'image/png';
+    const contentType = upstreamRes.headers['content-type'] ||
+      (filename.endsWith('.svg') ? 'image/svg+xml' : 'image/png');
 
     res.setHeader('Content-Type', contentType);
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Cache-Control', 'public, max-age=86400, immutable');
 
     return res.status(200).send(Buffer.from(upstreamRes.data));
-  } catch (err) {
-    // fallback 1x1 transparent pour éviter les 404 moches côté UI
-    const onePx = Buffer.from(
-      'R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==',
-      'base64'
-    );
+  } catch {
+    const onePx = Buffer.from('R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==', 'base64');
     res.setHeader('Content-Type', 'image/gif');
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Cache-Control', 'no-store');
@@ -36,13 +30,12 @@ r.get('/:filename', async (req, res) => {
   }
 });
 
-// Proxy générique par URL: /api/crests?u=https://crests.football-data.org/86.png
+// /api/crests?u=https://crests.football-data.org/86.png
 r.get('/', async (req, res) => {
   try {
-    const u = req.query.u;
+    const { u } = req.query;
     if (!u) return res.status(400).json({ error: 'Missing ?u=' });
 
-    // sécurité basique : n’autoriser que le host attendu
     const url = new URL(u);
     if (url.hostname !== 'crests.football-data.org') {
       return res.status(400).json({ error: 'Host not allowed' });
@@ -56,11 +49,8 @@ r.get('/', async (req, res) => {
     res.setHeader('Cache-Control', 'public, max-age=86400, immutable');
 
     return res.status(200).send(Buffer.from(upstreamRes.data));
-  } catch (err) {
-    const onePx = Buffer.from(
-      'R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==',
-      'base64'
-    );
+  } catch {
+    const onePx = Buffer.from('R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==', 'base64');
     res.setHeader('Content-Type', 'image/gif');
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Cache-Control', 'no-store');

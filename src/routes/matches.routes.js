@@ -1,11 +1,14 @@
 // src/routes/matches.routes.js
 import { Router } from 'express';
 import { getMatchday, getFinishedIndex } from '../services/footballData.service.js';
-import { mapLeagueToFootballData } from '../utils/footballdata-map.js';
 
 const r = Router();
 
-// GET /api/matches?league=laliga&season=2025&matchday=12
+// Exemples valides :
+//   /api/matches?league=PL&season=2025&matchday=1
+//   /api/matches?league=BL1&season=2025&matchday=1
+//   /api/matches?league=premier&season=2025&matchday=1
+//   /api/matches?league=bundes&season=2025&matchday=1
 r.get('/', async (req, res, next) => {
   try {
     const { league = 'laliga', season = 2025, matchday = 1 } = req.query;
@@ -14,7 +17,6 @@ r.get('/', async (req, res, next) => {
   } catch (e) { next(e); }
 });
 
-// GET /api/matches/finished-index?league=laliga&season=2025
 r.get('/finished-index', async (req, res, next) => {
   try {
     const { league = 'laliga', season = 2025 } = req.query;
@@ -23,7 +25,6 @@ r.get('/finished-index', async (req, res, next) => {
   } catch (e) { next(e); }
 });
 
-// GET /api/matches/current?league=laliga&season=2025
 r.get('/current', async (req, res, next) => {
   try {
     const { league = 'laliga', season = 2025 } = req.query;
