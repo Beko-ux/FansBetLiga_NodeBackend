@@ -1,0 +1,185 @@
+{
+  "league": "Primera Division",
+  "leagueCode": "PD",
+  "season": 2025,
+  "matchday": 3,
+  "resultSet": {
+    "count": 10,
+    "first": "2025-08-29",
+    "last": "2025-08-31",
+    "played": 10
+  },
+  "competition": {
+    "id": 2014,
+    "name": "Primera Division",
+    "code": "PD",
+    "emblem": "https://crests.football-data.org/laliga.png"
+  },
+  "days": [
+    {
+      "date": "2025-08-29",
+      "matches": [
+        {
+          "matchID": 544233,
+          "time": "06:30 PM",
+          "team1": "Elche",
+          "team2": "Levante",
+          "team1Id": 285,
+          "team2Id": 88,
+          "team1Logo": "https://crests.football-data.org/285.png",
+          "team2Logo": "https://crests.football-data.org/88.png",
+          "status": "finished",
+          "scoreA": 2,
+          "scoreB": 0,
+          "halfA": 0,
+          "halfB": 0
+        },
+        {
+          "matchID": 544239,
+          "time": "08:30 PM",
+          "team1": "Valencia",
+          "team2": "Getafe",
+          "team1Id": 95,
+          "team2Id": 82,
+          "team1Logo": "https://crests.football-data.org/95.png",
+          "team2Logo": "https://crests.football-data.org/82.png",
+          "status": "finished",
+          "scoreA": 3,
+          "scoreB": 0,
+          "halfA": 1,
+          "halfB": 0
+        }
+      ]
+    },
+    {
+      "date": "2025-08-30",
+      "matches": [
+        {
+          "matchID": 544231,
+          "time": "04:00 PM",
+          "team1": "Alavés",
+          "team2": "Atleti",
+          "team1Id": 263,
+          "team2Id": 78,
+          "team1Logo": "https://crests.football-data.org/263.png",
+          "team2Logo": "https://crests.football-data.org/78.png",
+          "status": "finished",
+          "scoreA": 1,
+          "scoreB": 1,
+          "halfA": 1,
+          "halfB": 1
+        },
+        {
+          "matchID": 544236,
+          "time": "06:00 PM",
+          "team1": "Real Oviedo",
+          "team2": "Real Sociedad",
+          "team1Id": 1048,
+          "team2Id": 92,
+          "team1Logo": "https://crests.football-data.org/1048.png",
+          "team2Logo": "https://crests.football-data.org/92.png",
+          "status": "finished",
+          "scoreA": 1,
+          "scoreB": 0,
+          "halfA": 1,
+          "halfB": 0
+        },
+        {
+          "matchID": 544235,
+          "time": "06:30 PM",
+          "team1": "Girona",
+          "team2": "Sevilla FC",
+          "team1Id": 298,
+          "team2Id": 559,
+          "team1Logo": "https://crests.football-data.org/298.png",
+          "team2Logo": "https://crests.football-data.org/559.png",
+          "status": "finished",
+          "scoreA": 0,
+          "scoreB": 2,
+          "halfA": 0,
+          "halfB": 1
+        },
+        {
+          "matchID": 544240,
+          "time": "08:30 PM",
+          "team1": "Real Madrid",
+          "team2": "Mallorca",
+          "team1Id": 86,
+          "team2Id": 89,
+          "team1Logo": "https://crests.football-data.org/86.png",
+          "team2Logo": "https://crests.football-data.org/89.png",
+          "status": "finished",
+          "scoreA": 2,
+          "scoreB": 1,
+          "halfA": 2,
+          "halfB": 1
+        }
+      ]
+    },
+    {
+      "date": "2025-08-31",
+      "matches": [
+        {
+          "matchID": 544232,
+          "time": "04:00 PM",
+          "team1": "Celta",
+          "team2": "Villarreal",
+          "team1Id": 558,
+          "team2Id": 94,
+          "team1Logo": "https://crests.football-data.org/558.png",
+          "team2Logo": "https://crests.football-data.org/94.png",
+          "status": "finished",
+          "scoreA": 1,
+          "scoreB": 1,
+          "halfA": 0,
+          "halfB": 0
+        },
+        {
+          "matchID": 544237,
+          "time": "06:00 PM",
+          "team1": "Real Betis",
+          "team2": "Athletic",
+          "team1Id": 90,
+          "team2Id": 77,
+          "team1Logo": "https://crests.football-data.org/90.png",
+          "team2Logo": "https://crests.football-data.org/77.png",
+          "status": "finished",
+          "scoreA": 1,
+          "scoreB": 2,
+          "halfA": 0,
+          "halfB": 0
+        },
+        {
+          "matchID": 544234,
+          "time": "06:30 PM",
+          "team1": "Espanyol",
+          "team2": "Osasuna",
+          "team1Id": 80,
+          "team2Id": 79,
+          "team1Logo": "https://crests.football-data.org/80.png",
+          "team2Logo": "https://crests.football-data.org/79.png",
+          "status": "finished",
+          "scoreA": 1,
+          "scoreB": 0,
+          "halfA": 0,
+          "halfB": 0
+        },
+        {
+          "matchID": 544238,
+          "time": "08:30 PM",
+          "team1": "Rayo Vallecano",
+          "team2": "Barça",
+          "team1Id": 87,
+          "team2Id": 81,
+          "team1Logo": "https://crests.football-data.org/87.png",
+          "team2Logo": "https://crests.football-data.org/81.png",
+          "status": "finished",
+          "scoreA": 1,
+          "scoreB": 1,
+          "halfA": 0,
+          "halfB": 1
+        }
+      ]
+    }
+  ]
+}
