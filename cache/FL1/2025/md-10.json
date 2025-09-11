@@ -1,0 +1,160 @@
+{
+  "league": "Ligue 1",
+  "leagueCode": "FL1",
+  "season": 2025,
+  "matchday": 10,
+  "resultSet": {
+    "count": 9,
+    "first": "2025-10-29",
+    "last": "2025-10-29",
+    "played": 0
+  },
+  "competition": {
+    "id": 2015,
+    "name": "Ligue 1",
+    "code": "FL1",
+    "emblem": "https://crests.football-data.org/FL1.png"
+  },
+  "days": [
+    {
+      "date": "2025-10-29",
+      "matches": [
+        {
+          "matchID": 542487,
+          "time": "06:00 PM",
+          "team1": "Le Havre",
+          "team2": "Brest",
+          "team1Id": 533,
+          "team2Id": 512,
+          "team1Logo": "https://crests.football-data.org/533.png",
+          "team2Logo": "https://crests.football-data.org/512.png",
+          "status": "timed",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 542488,
+          "time": "06:00 PM",
+          "team1": "Lorient",
+          "team2": "PSG",
+          "team1Id": 525,
+          "team2Id": 524,
+          "team1Logo": "https://crests.football-data.org/525.png",
+          "team2Logo": "https://crests.football-data.org/524.png",
+          "status": "timed",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 542489,
+          "time": "06:00 PM",
+          "team1": "FC Metz",
+          "team2": "RC Lens",
+          "team1Id": 545,
+          "team2Id": 546,
+          "team1Logo": "https://crests.football-data.org/545.png",
+          "team2Logo": "https://crests.football-data.org/546.png",
+          "status": "timed",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 542493,
+          "time": "06:00 PM",
+          "team1": "Nice",
+          "team2": "Lille",
+          "team1Id": 522,
+          "team2Id": 521,
+          "team1Logo": "https://crests.football-data.org/522.png",
+          "team2Logo": "https://crests.football-data.org/521.png",
+          "status": "timed",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 542490,
+          "time": "08:05 PM",
+          "team1": "Nantes",
+          "team2": "Monaco",
+          "team1Id": 543,
+          "team2Id": 548,
+          "team1Logo": "https://crests.football-data.org/543.png",
+          "team2Logo": "https://crests.football-data.org/548.png",
+          "status": "timed",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 542491,
+          "time": "08:05 PM",
+          "team1": "Paris FC",
+          "team2": "Olympique Lyon",
+          "team1Id": 1045,
+          "team2Id": 523,
+          "team1Logo": "https://crests.football-data.org/1045.png",
+          "team2Logo": "https://crests.football-data.org/523.png",
+          "status": "timed",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 542492,
+          "time": "08:05 PM",
+          "team1": "Toulouse",
+          "team2": "Stade Rennais",
+          "team1Id": 511,
+          "team2Id": 529,
+          "team1Logo": "https://crests.football-data.org/511.png",
+          "team2Logo": "https://crests.football-data.org/529.png",
+          "status": "timed",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 542494,
+          "time": "08:05 PM",
+          "team1": "Marseille",
+          "team2": "Angers SCO",
+          "team1Id": 516,
+          "team2Id": 532,
+          "team1Logo": "https://crests.football-data.org/516.png",
+          "team2Logo": "https://crests.football-data.org/532.png",
+          "status": "timed",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 542495,
+          "time": "08:05 PM",
+          "team1": "Strasbourg",
+          "team2": "Auxerre",
+          "team1Id": 576,
+          "team2Id": 519,
+          "team1Logo": "https://crests.football-data.org/576.png",
+          "team2Logo": "https://crests.football-data.org/519.png",
+          "status": "timed",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        }
+      ]
+    }
+  ]
+}
