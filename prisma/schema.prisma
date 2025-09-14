@@ -1,36 +1,31 @@
-// prisma/schema.prisma
 generator client {
-  provider      = "prisma-client-js"
-  binaryTargets = ["native", "debian-openssl-3.0.x"]
+  provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "sqlite" // ou "postgresql" selon ton .env
   url      = env("DATABASE_URL")
 }
 
 model User {
-  id           Int          @id @default(autoincrement())
-  name         String
-  email        String       @unique
-  password     String
-
-  // ✅ On garde une chaîne pour mémoriser le provider d’origine
-  // Valeurs possibles (convention côté app) : "local" | "google" | "facebook"
-  authProvider String       @default("local")
-
-  // Optionnel : identifiant renvoyé par Google (sub) ou Facebook (id)
+  id        Int       @id @default(autoincrement())
+  name      String
+  email     String    @unique
+  password  String
+  authProvider String  @default("local")
   providerId   String?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
 
-  createdAt    DateTime     @default(now())
-  updatedAt    DateTime     @updatedAt
-  predictions  Prediction[]
-  points       Point[]
+  predictions Prediction[]
+  points      Point[]
 }
 
 model Prediction {
   id          Int      @id @default(autoincrement())
   userId      Int
+  league      String   // "PD" | "PL" | ...
+  season      Int
   matchday    Int
   matchId     String
   team1Score  Int
@@ -39,13 +34,15 @@ model Prediction {
 
   user User @relation(fields: [userId], references: [id])
 
-  @@unique([userId, matchday, matchId])
-  @@index([userId, matchday])
+  @@index([userId, league, season, matchday])
+  @@unique([userId, league, season, matchday, matchId], name: "pred_user_league_season_md_mid")
 }
 
 model Point {
   id        Int      @id @default(autoincrement())
   userId    Int
+  league    String
+  season    Int
   matchday  Int
   matchId   String
   points    Int
@@ -53,18 +50,20 @@ model Point {
 
   user User @relation(fields: [userId], references: [id])
 
-  @@unique([userId, matchday, matchId])
-  @@index([userId, matchday])
+  @@index([userId, league, season, matchday])
+  @@unique([userId, league, season, matchday, matchId], name: "point_user_league_season_md_mid")
 }
 
 model Result {
   id         Int      @id @default(autoincrement())
+  league     String
+  season     Int
   matchday   Int
   matchId    String
   team1Score Int
   team2Score Int
   createdAt  DateTime @default(now())
 
-  @@unique([matchday, matchId])
-  @@index([matchday])
+  @@index([league, season, matchday])
+  @@unique([league, season, matchday, matchId], name: "result_league_season_md_mid")
 }
