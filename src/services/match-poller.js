@@ -208,10 +208,7 @@ const POLL_WINDOW_MD = Math.max(1, Number(process.env.POLL_WINDOW_MD || 3));
 // Throttle: délai mini entre appels Football-Data (plan gratuit = 10 rpm => >= 6000 ms)
 const FD_MIN_INTERVAL_MS = Math.max(1000, Number(process.env.FD_MIN_INTERVAL_MS || 7000));
 
-// Auto backfill : activer/désactiver + mode (when current MD shifts)
-// BACKFILL_AUTO=true|false
-// BACKFILL_ON_SHIFT=changed|all   (changed = uniquement les ligues dont la MD a changé, all = toutes les ligues)
-// BACKFILL_OVERWRITE=true|false   (si true -> réécrit même les snapshots existants)
+// Auto backfill : activer/désactiver + mode
 const BACKFILL_AUTO = String(process.env.BACKFILL_AUTO || 'false').toLowerCase() === 'true';
 const BACKFILL_ON_SHIFT = (process.env.BACKFILL_ON_SHIFT || 'changed').toLowerCase(); // 'changed' | 'all'
 const BACKFILL_OVERWRITE = String(process.env.BACKFILL_OVERWRITE || 'false').toLowerCase() === 'true';
@@ -219,8 +216,8 @@ const BACKFILL_OVERWRITE = String(process.env.BACKFILL_OVERWRITE || 'false').toL
 // Nombre de journées par ligue
 export const MAX_MD_BY_LEAGUE = { PL: 38, BL1: 34, PD: 38, SA: 38, FL1: 34 };
 
-// Dossiers cache/snapshots
-const SNAP_ROOT = path.resolve(process.cwd(), 'cache', 'snapshots');
+// ✅ Dossiers cache/snapshots ANCRÉS SUR LE CODE (indépendant du cwd)
+const SNAP_ROOT = path.resolve(__dirname, '../../cache/snapshots');
 
 function ensureDir(p) {
   if (!fs.existsSync(p)) fs.mkdirSync(p, { recursive: true });
@@ -289,22 +286,20 @@ function updateSnapshotIndex({ season, leagueCode, matchday }) {
   fs.writeFileSync(idxFile, JSON.stringify(idx, null, 2), 'utf-8');
 }
 
-/**
- * Appelle getMatchday avec throttle + retry/backoff si 429
- */
+// ---- Appelle FD avec throttle + retry/backoff si 429 ----
 export async function safeGetMatchday(params) {
   let attempt = 0;
   let backoff = withJitter(FD_MIN_INTERVAL_MS);
   while (true) {
     try {
       await throttleFd();
-      return await getMatchday(params); // retourne format normalisé (days/matches)
+      return await getMatchday(params); // format normalisé
     } catch (e) {
       const msg = String(e?.message || '');
       const is429 = msg.includes('Football-Data 429');
-      if (!is429 || attempt >= 4) throw e; // retry seulement 429, max 5 tentatives
+      if (!is429 || attempt >= 4) throw e;
       attempt += 1;
-      backoff = Math.min(backoff * 2, 60_000); // cap 60s
+      backoff = Math.min(backoff * 2, 60_000);
       console.warn(`[matchPoller] 429, retry in ${backoff}ms (attempt ${attempt})`);
       await sleep(backoff);
     }
@@ -312,7 +307,6 @@ export async function safeGetMatchday(params) {
 }
 
 async function buildWindowMatchdays({ leagueCode, season }) {
-  // lire la MD "courante" depuis l'index (calculée quand une MD est 100% finie)
   let current = 1;
   try {
     const idx = await getFinishedIndex({ league: leagueCode, season });
@@ -329,7 +323,7 @@ async function buildWindowMatchdays({ leagueCode, season }) {
   return Array.from(mds).sort((a, b) => a - b);
 }
 
-/** Utilitaire exporté : fabrique un snapshot pour une MD précise */
+// ---- Utilitaires exportés ----
 export async function buildSnapshotForMD({ season, leagueCode, matchday }) {
   const data = await safeGetMatchday({ league: leagueCode, season, matchday });
   const written = writeSnapshot({ season, leagueCode, matchday, data });
@@ -337,7 +331,6 @@ export async function buildSnapshotForMD({ season, leagueCode, matchday }) {
   return written;
 }
 
-/** Backfill d’une ligue (peut écraser selon BACKFILL_OVERWRITE) */
 export async function backfillLeague({ season, leagueCode, overwrite = BACKFILL_OVERWRITE }) {
   const maxMd = MAX_MD_BY_LEAGUE[leagueCode] ?? 38;
   console.log(`[auto-backfill] ${leagueCode} — season ${season} — MD 1..${maxMd} ${overwrite ? '(overwrite)' : ''}`);
@@ -393,7 +386,7 @@ const _lastCurrentByLeague = new Map();
 
 async function checkShiftAndMaybeBackfill() {
   if (!BACKFILL_AUTO) return;
-  if (_backfillRunning) return; // anti chevauchement
+  if (_backfillRunning) return;
 
   const season = Number(DEFAULT_SEASON || new Date().getFullYear());
   const changedLeagues = [];
@@ -418,7 +411,7 @@ async function checkShiftAndMaybeBackfill() {
 
   _backfillRunning = true;
   try {
-    if (BACKFILL_ON_SHIFT === 'all') {
+    if ((process.env.BACKFILL_ON_SHIFT || '').toLowerCase() === 'all') {
       console.log('[matchPoller] Auto backfill: ALL leagues triggered');
       await backfillAll({ season, leagues: POLL_LEAGUES, overwrite: BACKFILL_OVERWRITE });
     } else {
@@ -457,7 +450,6 @@ export function start() {
     } catch (e) {
       console.error('[matchPoller] run error:', e?.message || e);
     } finally {
-      // après chaque run, on regarde si la journée courante a changé
       await checkShiftAndMaybeBackfill();
     }
   }, POLL_INTERVAL);
