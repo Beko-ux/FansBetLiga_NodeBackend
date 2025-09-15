@@ -11,6 +11,7 @@
     "postinstall": "prisma generate",
 
     "backfill": "node src/scripts/backfill-snapshots.js",
+    "backfill:all": "BACKFILL_OVERWRITE=true node src/scripts/backfill-snapshots.js",
     "poller:once": "node -e \"import('./src/services/match-poller.js').then(m=>m.runOnce())\""
   },
   "dependencies": {

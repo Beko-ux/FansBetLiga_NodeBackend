@@ -2,10 +2,8 @@
   "season": 2025,
   "league": "SA",
   "matchday": 3,
-  "generatedAt": "2025-09-15T23:20:35.428Z",
-  "finished": [],
-  "live": [],
-  "upcoming": [
+  "generatedAt": "2025-09-15T23:32:58.476Z",
+  "finished": [
     {
       "date": "2025-09-13",
       "matchID": 536839,
@@ -16,11 +14,11 @@
       "team2Id": 112,
       "team1Logo": "https://crests.football-data.org/104.png",
       "team2Logo": "https://crests.football-data.org/112.png",
-      "status": "timed",
-      "scoreA": null,
-      "scoreB": null,
-      "halfA": null,
-      "halfB": null
+      "status": "finished",
+      "scoreA": 2,
+      "scoreB": 0,
+      "halfA": 1,
+      "halfB": 0
     },
     {
       "date": "2025-09-13",
@@ -32,11 +30,11 @@
       "team2Id": 108,
       "team1Logo": "https://crests.football-data.org/109.png",
       "team2Logo": "https://crests.football-data.org/108.png",
-      "status": "timed",
-      "scoreA": null,
-      "scoreB": null,
-      "halfA": null,
-      "halfB": null
+      "status": "finished",
+      "scoreA": 4,
+      "scoreB": 3,
+      "halfA": 2,
+      "halfB": 1
     },
     {
       "date": "2025-09-13",
@@ -48,11 +46,11 @@
       "team2Id": 113,
       "team1Logo": "https://crests.football-data.org/99.png",
       "team2Logo": "https://crests.football-data.org/113.png",
-      "status": "timed",
-      "scoreA": null,
-      "scoreB": null,
-      "halfA": null,
-      "halfB": null
+      "status": "finished",
+      "scoreA": 1,
+      "scoreB": 3,
+      "halfA": 0,
+      "halfB": 2
     },
     {
       "date": "2025-09-14",
@@ -64,11 +62,11 @@
       "team2Id": 586,
       "team1Logo": "https://crests.football-data.org/100.png",
       "team2Logo": "https://crests.football-data.org/586.png",
-      "status": "timed",
-      "scoreA": null,
-      "scoreB": null,
-      "halfA": null,
-      "halfB": null
+      "status": "finished",
+      "scoreA": 0,
+      "scoreB": 1,
+      "halfA": 0,
+      "halfB": 0
     },
     {
       "date": "2025-09-14",
@@ -80,11 +78,11 @@
       "team2Id": 5890,
       "team1Logo": "https://crests.football-data.org/102.png",
       "team2Logo": "https://crests.football-data.org/5890.png",
-      "status": "timed",
-      "scoreA": null,
-      "scoreB": null,
-      "halfA": null,
-      "halfB": null
+      "status": "finished",
+      "scoreA": 4,
+      "scoreB": 1,
+      "halfA": 1,
+      "halfB": 0
     },
     {
       "date": "2025-09-14",
@@ -96,11 +94,11 @@
       "team2Id": 115,
       "team1Logo": "https://crests.football-data.org/487.png",
       "team2Logo": "https://crests.football-data.org/115.png",
-      "status": "timed",
-      "scoreA": null,
-      "scoreB": null,
-      "halfA": null,
-      "halfB": null
+      "status": "finished",
+      "scoreA": 0,
+      "scoreB": 1,
+      "halfA": 0,
+      "halfB": 1
     },
     {
       "date": "2025-09-14",
@@ -112,11 +110,11 @@
       "team2Id": 110,
       "team1Logo": "https://crests.football-data.org/471.png",
       "team2Logo": "https://crests.football-data.org/110.png",
-      "status": "timed",
-      "scoreA": null,
-      "scoreB": null,
-      "halfA": null,
-      "halfB": null
+      "status": "finished",
+      "scoreA": 1,
+      "scoreB": 0,
+      "halfA": 0,
+      "halfB": 0
     },
     {
       "date": "2025-09-14",
@@ -128,11 +126,11 @@
       "team2Id": 103,
       "team1Logo": "https://crests.football-data.org/98.png",
       "team2Logo": "https://crests.football-data.org/103.png",
-      "status": "timed",
-      "scoreA": null,
-      "scoreB": null,
-      "halfA": null,
-      "halfB": null
+      "status": "finished",
+      "scoreA": 1,
+      "scoreB": 0,
+      "halfA": 0,
+      "halfB": 0
     },
     {
       "date": "2025-09-15",
@@ -144,11 +142,11 @@
       "team2Id": 457,
       "team1Logo": "https://crests.football-data.org/450.png",
       "team2Logo": "https://crests.football-data.org/457.png",
-      "status": "timed",
-      "scoreA": null,
-      "scoreB": null,
-      "halfA": null,
-      "halfB": null
+      "status": "finished",
+      "scoreA": 0,
+      "scoreB": 0,
+      "halfA": 0,
+      "halfB": 0
     },
     {
       "date": "2025-09-15",
@@ -160,11 +158,13 @@
       "team2Id": 107,
       "team1Logo": "https://crests.football-data.org/7397.png",
       "team2Logo": "https://crests.football-data.org/107.png",
-      "status": "timed",
-      "scoreA": null,
-      "scoreB": null,
-      "halfA": null,
-      "halfB": null
+      "status": "finished",
+      "scoreA": 1,
+      "scoreB": 1,
+      "halfA": 1,
+      "halfB": 0
     }
-  ]
+  ],
+  "live": [],
+  "upcoming": []
 }

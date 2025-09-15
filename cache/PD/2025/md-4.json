@@ -7,7 +7,7 @@
     "count": 10,
     "first": "2025-09-12",
     "last": "2025-09-15",
-    "played": 0
+    "played": 10
   },
   "competition": {
     "id": 2014,
@@ -28,11 +28,11 @@
           "team2Id": 285,
           "team1Logo": "https://crests.football-data.org/559.png",
           "team2Logo": "https://crests.football-data.org/285.png",
-          "status": "timed",
-          "scoreA": null,
-          "scoreB": null,
-          "halfA": null,
-          "halfB": null
+          "status": "finished",
+          "scoreA": 2,
+          "scoreB": 2,
+          "halfA": 1,
+          "halfB": 0
         }
       ]
     },
@@ -48,11 +48,11 @@
           "team2Id": 1048,
           "team1Logo": "https://crests.football-data.org/82.png",
           "team2Logo": "https://crests.football-data.org/1048.png",
-          "status": "timed",
-          "scoreA": null,
-          "scoreB": null,
-          "halfA": null,
-          "halfB": null
+          "status": "finished",
+          "scoreA": 2,
+          "scoreB": 0,
+          "halfA": 2,
+          "halfB": 0
         },
         {
           "matchID": 544250,
@@ -63,11 +63,11 @@
           "team2Id": 86,
           "team1Logo": "https://crests.football-data.org/92.png",
           "team2Logo": "https://crests.football-data.org/86.png",
-          "status": "timed",
-          "scoreA": null,
-          "scoreB": null,
-          "halfA": null,
-          "halfB": null
+          "status": "finished",
+          "scoreA": 1,
+          "scoreB": 2,
+          "halfA": 0,
+          "halfB": 2
         },
         {
           "matchID": 544247,
@@ -78,11 +78,11 @@
           "team2Id": 263,
           "team1Logo": "https://crests.football-data.org/77.png",
           "team2Logo": "https://crests.football-data.org/263.png",
-          "status": "timed",
-          "scoreA": null,
-          "scoreB": null,
-          "halfA": null,
-          "halfB": null
+          "status": "finished",
+          "scoreA": 0,
+          "scoreB": 1,
+          "halfA": 0,
+          "halfB": 0
         },
         {
           "matchID": 544241,
@@ -93,11 +93,11 @@
           "team2Id": 94,
           "team1Logo": "https://crests.football-data.org/78.png",
           "team2Logo": "https://crests.football-data.org/94.png",
-          "status": "timed",
-          "scoreA": null,
-          "scoreB": null,
-          "halfA": null,
-          "halfB": null
+          "status": "finished",
+          "scoreA": 2,
+          "scoreB": 0,
+          "halfA": 1,
+          "halfB": 0
         }
       ]
     },
@@ -113,11 +113,11 @@
           "team2Id": 298,
           "team1Logo": "https://crests.football-data.org/558.png",
           "team2Logo": "https://crests.football-data.org/298.png",
-          "status": "timed",
-          "scoreA": null,
-          "scoreB": null,
-          "halfA": null,
-          "halfB": null
+          "status": "finished",
+          "scoreA": 1,
+          "scoreB": 1,
+          "halfA": 0,
+          "halfB": 1
         },
         {
           "matchID": 544248,
@@ -128,11 +128,11 @@
           "team2Id": 90,
           "team1Logo": "https://crests.football-data.org/88.png",
           "team2Logo": "https://crests.football-data.org/90.png",
-          "status": "timed",
-          "scoreA": null,
-          "scoreB": null,
-          "halfA": null,
-          "halfB": null
+          "status": "finished",
+          "scoreA": 2,
+          "scoreB": 2,
+          "halfA": 2,
+          "halfB": 1
         },
         {
           "matchID": 544246,
@@ -143,11 +143,11 @@
           "team2Id": 87,
           "team1Logo": "https://crests.football-data.org/79.png",
           "team2Logo": "https://crests.football-data.org/87.png",
-          "status": "timed",
-          "scoreA": null,
-          "scoreB": null,
-          "halfA": null,
-          "halfB": null
+          "status": "finished",
+          "scoreA": 2,
+          "scoreB": 0,
+          "halfA": 1,
+          "halfB": 0
         },
         {
           "matchID": 544242,
@@ -158,11 +158,11 @@
           "team2Id": 95,
           "team1Logo": "https://crests.football-data.org/81.png",
           "team2Logo": "https://crests.football-data.org/95.png",
-          "status": "timed",
-          "scoreA": null,
-          "scoreB": null,
-          "halfA": null,
-          "halfB": null
+          "status": "finished",
+          "scoreA": 6,
+          "scoreB": 0,
+          "halfA": 1,
+          "halfB": 0
         }
       ]
     },
@@ -178,11 +178,11 @@
           "team2Id": 89,
           "team1Logo": "https://crests.football-data.org/80.png",
           "team2Logo": "https://crests.football-data.org/89.png",
-          "status": "timed",
-          "scoreA": null,
-          "scoreB": null,
-          "halfA": null,
-          "halfB": null
+          "status": "finished",
+          "scoreA": 3,
+          "scoreB": 2,
+          "halfA": 2,
+          "halfB": 1
         }
       ]
     }
