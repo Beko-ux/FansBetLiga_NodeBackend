@@ -1,0 +1,185 @@
+{
+  "league": "Serie A",
+  "leagueCode": "SA",
+  "season": 2025,
+  "matchday": 9,
+  "resultSet": {
+    "count": 10,
+    "first": "2025-10-28",
+    "last": "2025-10-30",
+    "played": 0
+  },
+  "competition": {
+    "id": 2019,
+    "name": "Serie A",
+    "code": "SA",
+    "emblem": "https://crests.football-data.org/SA.png"
+  },
+  "days": [
+    {
+      "date": "2025-10-28",
+      "matches": [
+        {
+          "matchID": 536904,
+          "time": "05:30 PM",
+          "team1": "Lecce",
+          "team2": "Napoli",
+          "team1Id": 5890,
+          "team2Id": 113,
+          "team1Logo": "https://crests.football-data.org/5890.png",
+          "team2Logo": "https://crests.football-data.org/113.png",
+          "status": "timed",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 536896,
+          "time": "07:45 PM",
+          "team1": "Atalanta",
+          "team2": "Milan",
+          "team1Id": 102,
+          "team2Id": 98,
+          "team1Logo": "https://crests.football-data.org/102.png",
+          "team2Logo": "https://crests.football-data.org/98.png",
+          "status": "timed",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        }
+      ]
+    },
+    {
+      "date": "2025-10-29",
+      "matches": [
+        {
+          "matchID": 536895,
+          "time": "05:30 PM",
+          "team1": "Roma",
+          "team2": "Parma",
+          "team1Id": 100,
+          "team2Id": 112,
+          "team1Logo": "https://crests.football-data.org/100.png",
+          "team2Logo": "https://crests.football-data.org/112.png",
+          "status": "timed",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 536899,
+          "time": "05:30 PM",
+          "team1": "Como 1907",
+          "team2": "Verona",
+          "team1Id": 7397,
+          "team2Id": 450,
+          "team1Logo": "https://crests.football-data.org/7397.png",
+          "team2Logo": "https://crests.football-data.org/450.png",
+          "status": "timed",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 536902,
+          "time": "05:30 PM",
+          "team1": "Juventus",
+          "team2": "Udinese",
+          "team1Id": 109,
+          "team2Id": 115,
+          "team1Logo": "https://crests.football-data.org/109.png",
+          "team2Logo": "https://crests.football-data.org/115.png",
+          "status": "timed",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 536898,
+          "time": "07:45 PM",
+          "team1": "Genoa",
+          "team2": "Cremonese",
+          "team1Id": 107,
+          "team2Id": 457,
+          "team1Logo": "https://crests.football-data.org/107.png",
+          "team2Logo": "https://crests.football-data.org/457.png",
+          "status": "timed",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 536900,
+          "time": "07:45 PM",
+          "team1": "Bologna",
+          "team2": "Torino",
+          "team1Id": 103,
+          "team2Id": 586,
+          "team1Logo": "https://crests.football-data.org/103.png",
+          "team2Logo": "https://crests.football-data.org/586.png",
+          "status": "timed",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 536901,
+          "time": "07:45 PM",
+          "team1": "Inter",
+          "team2": "Fiorentina",
+          "team1Id": 108,
+          "team2Id": 99,
+          "team1Logo": "https://crests.football-data.org/108.png",
+          "team2Logo": "https://crests.football-data.org/99.png",
+          "status": "timed",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        }
+      ]
+    },
+    {
+      "date": "2025-10-30",
+      "matches": [
+        {
+          "matchID": 536897,
+          "time": "05:30 PM",
+          "team1": "Cagliari",
+          "team2": "Sassuolo",
+          "team1Id": 104,
+          "team2Id": 471,
+          "team1Logo": "https://crests.football-data.org/104.png",
+          "team2Logo": "https://crests.football-data.org/471.png",
+          "status": "timed",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 536903,
+          "time": "07:45 PM",
+          "team1": "AC Pisa",
+          "team2": "Lazio",
+          "team1Id": 487,
+          "team2Id": 110,
+          "team1Logo": "https://crests.football-data.org/487.png",
+          "team2Logo": "https://crests.football-data.org/110.png",
+          "status": "timed",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        }
+      ]
+    }
+  ]
+}

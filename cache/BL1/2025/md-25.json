@@ -1,0 +1,160 @@
+{
+  "league": "Bundesliga",
+  "leagueCode": "BL1",
+  "season": 2025,
+  "matchday": 25,
+  "resultSet": {
+    "count": 9,
+    "first": "2026-03-07",
+    "last": "2026-03-07",
+    "played": 0
+  },
+  "competition": {
+    "id": 2002,
+    "name": "Bundesliga",
+    "code": "BL1",
+    "emblem": "https://crests.football-data.org/BL1.png"
+  },
+  "days": [
+    {
+      "date": "2026-03-07",
+      "matches": [
+        {
+          "matchID": 540622,
+          "time": "12:00 AM",
+          "team1": "Freiburg",
+          "team2": "Leverkusen",
+          "team1Id": 17,
+          "team2Id": 3,
+          "team1Logo": "https://crests.football-data.org/17.png",
+          "team2Logo": "https://crests.football-data.org/3.png",
+          "status": "scheduled",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 540623,
+          "time": "12:00 AM",
+          "team1": "St. Pauli",
+          "team2": "Frankfurt",
+          "team1Id": 20,
+          "team2Id": 19,
+          "team1Logo": "https://crests.football-data.org/20.png",
+          "team2Logo": "https://crests.football-data.org/19.png",
+          "status": "scheduled",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 540624,
+          "time": "12:00 AM",
+          "team1": "1. FC Köln",
+          "team2": "Dortmund",
+          "team1Id": 1,
+          "team2Id": 4,
+          "team1Logo": "https://crests.football-data.org/1.png",
+          "team2Logo": "https://crests.football-data.org/4.png",
+          "status": "scheduled",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 540625,
+          "time": "12:00 AM",
+          "team1": "Union Berlin",
+          "team2": "Bremen",
+          "team1Id": 28,
+          "team2Id": 12,
+          "team1Logo": "https://crests.football-data.org/28.png",
+          "team2Logo": "https://crests.football-data.org/12.png",
+          "status": "scheduled",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 540626,
+          "time": "12:00 AM",
+          "team1": "Mainz",
+          "team2": "Stuttgart",
+          "team1Id": 15,
+          "team2Id": 10,
+          "team1Logo": "https://crests.football-data.org/15.png",
+          "team2Logo": "https://crests.football-data.org/10.png",
+          "status": "scheduled",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 540627,
+          "time": "12:00 AM",
+          "team1": "Bayern",
+          "team2": "M'gladbach",
+          "team1Id": 5,
+          "team2Id": 18,
+          "team1Logo": "https://crests.football-data.org/5.png",
+          "team2Logo": "https://crests.football-data.org/18.png",
+          "status": "scheduled",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 540628,
+          "time": "12:00 AM",
+          "team1": "RB Leipzig",
+          "team2": "Augsburg",
+          "team1Id": 721,
+          "team2Id": 16,
+          "team1Logo": "https://crests.football-data.org/721.png",
+          "team2Logo": "https://crests.football-data.org/16.png",
+          "status": "scheduled",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 540629,
+          "time": "12:00 AM",
+          "team1": "Heidenheim",
+          "team2": "Hoffenheim",
+          "team1Id": 44,
+          "team2Id": 2,
+          "team1Logo": "https://crests.football-data.org/44.png",
+          "team2Logo": "https://crests.football-data.org/2.png",
+          "status": "scheduled",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 540630,
+          "time": "12:00 AM",
+          "team1": "Wolfsburg",
+          "team2": "HSV",
+          "team1Id": 11,
+          "team2Id": 7,
+          "team1Logo": "https://crests.football-data.org/11.png",
+          "team2Logo": "https://crests.football-data.org/7.png",
+          "status": "scheduled",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        }
+      ]
+    }
+  ]
+}

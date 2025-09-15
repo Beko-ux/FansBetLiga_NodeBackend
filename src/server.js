@@ -64,12 +64,19 @@
 
 
 
+
+
+
+
+
+
 // src/server.js
 import express from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
 import router from './routes/index.js';
+import { start as startMatchPoller, stop as stopMatchPoller } from './services/match-poller.js';
 
 dotenv.config();
 
@@ -102,11 +109,23 @@ app.use((err, _req, res, _next) => {
 const port = process.env.PORT || 3000;
 const server = app.listen(port, () => {
   console.log(`API listening on http://localhost:${port}`);
+
+  // Démarre le poller (désactive-le en mettant MATCH_POLL_ENABLED=0 si besoin)
+  if (process.env.MATCH_POLL_ENABLED !== '0') {
+    try {
+      startMatchPoller();
+    } catch (e) {
+      console.error('Failed to start match poller:', e?.message || e);
+    }
+  } else {
+    console.log('Match poller disabled by env (MATCH_POLL_ENABLED=0)');
+  }
 });
 
 // Arrêt propre
 const shutdown = async () => {
   console.log('Shutting down...');
+  try { stopMatchPoller(); } catch {}
   server.close(() => process.exit(0));
 };
 process.on('SIGINT', shutdown);

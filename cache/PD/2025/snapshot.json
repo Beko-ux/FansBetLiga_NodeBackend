@@ -1,0 +1,386 @@
+{
+  "league": "PD",
+  "season": 2025,
+  "byMatchday": {
+    "3": {
+      "finished": [
+        {
+          "matchID": "544233",
+          "date": "2025-08-29",
+          "time": "06:30 PM",
+          "team1": "Elche",
+          "team2": "Levante",
+          "team1Logo": "https://crests.football-data.org/285.png",
+          "team2Logo": "https://crests.football-data.org/88.png",
+          "scoreA": 2,
+          "scoreB": 0,
+          "status": "finished"
+        },
+        {
+          "matchID": "544239",
+          "date": "2025-08-29",
+          "time": "08:30 PM",
+          "team1": "Valencia",
+          "team2": "Getafe",
+          "team1Logo": "https://crests.football-data.org/95.png",
+          "team2Logo": "https://crests.football-data.org/82.png",
+          "scoreA": 3,
+          "scoreB": 0,
+          "status": "finished"
+        },
+        {
+          "matchID": "544231",
+          "date": "2025-08-30",
+          "time": "04:00 PM",
+          "team1": "Alavés",
+          "team2": "Atleti",
+          "team1Logo": "https://crests.football-data.org/263.png",
+          "team2Logo": "https://crests.football-data.org/78.png",
+          "scoreA": 1,
+          "scoreB": 1,
+          "status": "finished"
+        },
+        {
+          "matchID": "544236",
+          "date": "2025-08-30",
+          "time": "06:00 PM",
+          "team1": "Real Oviedo",
+          "team2": "Real Sociedad",
+          "team1Logo": "https://crests.football-data.org/1048.png",
+          "team2Logo": "https://crests.football-data.org/92.png",
+          "scoreA": 1,
+          "scoreB": 0,
+          "status": "finished"
+        },
+        {
+          "matchID": "544235",
+          "date": "2025-08-30",
+          "time": "06:30 PM",
+          "team1": "Girona",
+          "team2": "Sevilla FC",
+          "team1Logo": "https://crests.football-data.org/298.png",
+          "team2Logo": "https://crests.football-data.org/559.png",
+          "scoreA": 0,
+          "scoreB": 2,
+          "status": "finished"
+        },
+        {
+          "matchID": "544240",
+          "date": "2025-08-30",
+          "time": "08:30 PM",
+          "team1": "Real Madrid",
+          "team2": "Mallorca",
+          "team1Logo": "https://crests.football-data.org/86.png",
+          "team2Logo": "https://crests.football-data.org/89.png",
+          "scoreA": 2,
+          "scoreB": 1,
+          "status": "finished"
+        },
+        {
+          "matchID": "544232",
+          "date": "2025-08-31",
+          "time": "04:00 PM",
+          "team1": "Celta",
+          "team2": "Villarreal",
+          "team1Logo": "https://crests.football-data.org/558.png",
+          "team2Logo": "https://crests.football-data.org/94.png",
+          "scoreA": 1,
+          "scoreB": 1,
+          "status": "finished"
+        },
+        {
+          "matchID": "544237",
+          "date": "2025-08-31",
+          "time": "06:00 PM",
+          "team1": "Real Betis",
+          "team2": "Athletic",
+          "team1Logo": "https://crests.football-data.org/90.png",
+          "team2Logo": "https://crests.football-data.org/77.png",
+          "scoreA": 1,
+          "scoreB": 2,
+          "status": "finished"
+        },
+        {
+          "matchID": "544234",
+          "date": "2025-08-31",
+          "time": "06:30 PM",
+          "team1": "Espanyol",
+          "team2": "Osasuna",
+          "team1Logo": "https://crests.football-data.org/80.png",
+          "team2Logo": "https://crests.football-data.org/79.png",
+          "scoreA": 1,
+          "scoreB": 0,
+          "status": "finished"
+        },
+        {
+          "matchID": "544238",
+          "date": "2025-08-31",
+          "time": "08:30 PM",
+          "team1": "Rayo Vallecano",
+          "team2": "Barça",
+          "team1Logo": "https://crests.football-data.org/87.png",
+          "team2Logo": "https://crests.football-data.org/81.png",
+          "scoreA": 1,
+          "scoreB": 1,
+          "status": "finished"
+        }
+      ],
+      "live": [],
+      "upcoming": []
+    },
+    "4": {
+      "finished": [
+        {
+          "matchID": "544249",
+          "date": "2025-09-12",
+          "time": "08:00 PM",
+          "team1": "Sevilla FC",
+          "team2": "Elche",
+          "team1Logo": "https://crests.football-data.org/559.png",
+          "team2Logo": "https://crests.football-data.org/285.png",
+          "scoreA": 2,
+          "scoreB": 2,
+          "status": "finished"
+        },
+        {
+          "matchID": "544245",
+          "date": "2025-09-13",
+          "time": "01:00 PM",
+          "team1": "Getafe",
+          "team2": "Real Oviedo",
+          "team1Logo": "https://crests.football-data.org/82.png",
+          "team2Logo": "https://crests.football-data.org/1048.png",
+          "scoreA": 2,
+          "scoreB": 0,
+          "status": "finished"
+        },
+        {
+          "matchID": "544250",
+          "date": "2025-09-13",
+          "time": "03:15 PM",
+          "team1": "Real Sociedad",
+          "team2": "Real Madrid",
+          "team1Logo": "https://crests.football-data.org/92.png",
+          "team2Logo": "https://crests.football-data.org/86.png",
+          "scoreA": 1,
+          "scoreB": 2,
+          "status": "finished"
+        },
+        {
+          "matchID": "544247",
+          "date": "2025-09-13",
+          "time": "05:30 PM",
+          "team1": "Athletic",
+          "team2": "Alavés",
+          "team1Logo": "https://crests.football-data.org/77.png",
+          "team2Logo": "https://crests.football-data.org/263.png",
+          "scoreA": 0,
+          "scoreB": 1,
+          "status": "finished"
+        },
+        {
+          "matchID": "544241",
+          "date": "2025-09-13",
+          "time": "08:00 PM",
+          "team1": "Atleti",
+          "team2": "Villarreal",
+          "team1Logo": "https://crests.football-data.org/78.png",
+          "team2Logo": "https://crests.football-data.org/94.png",
+          "scoreA": 2,
+          "scoreB": 0,
+          "status": "finished"
+        },
+        {
+          "matchID": "544243",
+          "date": "2025-09-14",
+          "time": "01:00 PM",
+          "team1": "Celta",
+          "team2": "Girona",
+          "team1Logo": "https://crests.football-data.org/558.png",
+          "team2Logo": "https://crests.football-data.org/298.png",
+          "scoreA": 1,
+          "scoreB": 1,
+          "status": "finished"
+        },
+        {
+          "matchID": "544248",
+          "date": "2025-09-14",
+          "time": "03:15 PM",
+          "team1": "Levante",
+          "team2": "Real Betis",
+          "team1Logo": "https://crests.football-data.org/88.png",
+          "team2Logo": "https://crests.football-data.org/90.png",
+          "scoreA": 2,
+          "scoreB": 2,
+          "status": "finished"
+        },
+        {
+          "matchID": "544246",
+          "date": "2025-09-14",
+          "time": "05:30 PM",
+          "team1": "Osasuna",
+          "team2": "Rayo Vallecano",
+          "team1Logo": "https://crests.football-data.org/79.png",
+          "team2Logo": "https://crests.football-data.org/87.png",
+          "scoreA": 2,
+          "scoreB": 0,
+          "status": "finished"
+        },
+        {
+          "matchID": "544242",
+          "date": "2025-09-14",
+          "time": "08:00 PM",
+          "team1": "Barça",
+          "team2": "Valencia",
+          "team1Logo": "https://crests.football-data.org/81.png",
+          "team2Logo": "https://crests.football-data.org/95.png",
+          "scoreA": 6,
+          "scoreB": 0,
+          "status": "finished"
+        }
+      ],
+      "live": [
+        {
+          "matchID": "544244",
+          "date": "2025-09-15",
+          "time": "08:00 PM",
+          "team1": "Espanyol",
+          "team2": "Mallorca",
+          "team1Logo": "https://crests.football-data.org/80.png",
+          "team2Logo": "https://crests.football-data.org/89.png",
+          "scoreA": 0,
+          "scoreB": 0,
+          "status": "in_play"
+        }
+      ],
+      "upcoming": []
+    },
+    "5": {
+      "finished": [],
+      "live": [],
+      "upcoming": [
+        {
+          "matchID": "544253",
+          "date": "2025-09-19",
+          "time": "08:00 PM",
+          "team1": "Real Betis",
+          "team2": "Real Sociedad",
+          "team1Logo": "https://crests.football-data.org/90.png",
+          "team2Logo": "https://crests.football-data.org/92.png",
+          "scoreA": null,
+          "scoreB": null,
+          "status": "timed"
+        },
+        {
+          "matchID": "544255",
+          "date": "2025-09-20",
+          "time": "01:00 PM",
+          "team1": "Girona",
+          "team2": "Levante",
+          "team1Logo": "https://crests.football-data.org/298.png",
+          "team2Logo": "https://crests.football-data.org/88.png",
+          "scoreA": null,
+          "scoreB": null,
+          "status": "timed"
+        },
+        {
+          "matchID": "544259",
+          "date": "2025-09-20",
+          "time": "03:15 PM",
+          "team1": "Real Madrid",
+          "team2": "Espanyol",
+          "team1Logo": "https://crests.football-data.org/86.png",
+          "team2Logo": "https://crests.football-data.org/80.png",
+          "scoreA": null,
+          "scoreB": null,
+          "status": "timed"
+        },
+        {
+          "matchID": "544260",
+          "date": "2025-09-20",
+          "time": "05:30 PM",
+          "team1": "Villarreal",
+          "team2": "Osasuna",
+          "team1Logo": "https://crests.football-data.org/94.png",
+          "team2Logo": "https://crests.football-data.org/79.png",
+          "scoreA": null,
+          "scoreB": null,
+          "status": "timed"
+        },
+        {
+          "matchID": "544251",
+          "date": "2025-09-20",
+          "time": "05:30 PM",
+          "team1": "Alavés",
+          "team2": "Sevilla FC",
+          "team1Logo": "https://crests.football-data.org/263.png",
+          "team2Logo": "https://crests.football-data.org/559.png",
+          "scoreA": null,
+          "scoreB": null,
+          "status": "timed"
+        },
+        {
+          "matchID": "544256",
+          "date": "2025-09-20",
+          "time": "08:00 PM",
+          "team1": "Valencia",
+          "team2": "Athletic",
+          "team1Logo": "https://crests.football-data.org/95.png",
+          "team2Logo": "https://crests.football-data.org/77.png",
+          "scoreA": null,
+          "scoreB": null,
+          "status": "timed"
+        },
+        {
+          "matchID": "544258",
+          "date": "2025-09-21",
+          "time": "01:00 PM",
+          "team1": "Rayo Vallecano",
+          "team2": "Celta",
+          "team1Logo": "https://crests.football-data.org/87.png",
+          "team2Logo": "https://crests.football-data.org/558.png",
+          "scoreA": null,
+          "scoreB": null,
+          "status": "timed"
+        },
+        {
+          "matchID": "544257",
+          "date": "2025-09-21",
+          "time": "03:15 PM",
+          "team1": "Mallorca",
+          "team2": "Atleti",
+          "team1Logo": "https://crests.football-data.org/89.png",
+          "team2Logo": "https://crests.football-data.org/78.png",
+          "scoreA": null,
+          "scoreB": null,
+          "status": "timed"
+        },
+        {
+          "matchID": "544254",
+          "date": "2025-09-21",
+          "time": "05:30 PM",
+          "team1": "Elche",
+          "team2": "Real Oviedo",
+          "team1Logo": "https://crests.football-data.org/285.png",
+          "team2Logo": "https://crests.football-data.org/1048.png",
+          "scoreA": null,
+          "scoreB": null,
+          "status": "timed"
+        },
+        {
+          "matchID": "544252",
+          "date": "2025-09-21",
+          "time": "08:00 PM",
+          "team1": "Barça",
+          "team2": "Getafe",
+          "team1Logo": "https://crests.football-data.org/81.png",
+          "team2Logo": "https://crests.football-data.org/82.png",
+          "scoreA": null,
+          "scoreB": null,
+          "status": "timed"
+        }
+      ]
+    }
+  },
+  "updatedAt": "2025-09-15T19:25:52.623Z"
+}

@@ -1,0 +1,160 @@
+{
+  "league": "Ligue 1",
+  "leagueCode": "FL1",
+  "season": 2025,
+  "matchday": 28,
+  "resultSet": {
+    "count": 9,
+    "first": "2026-04-05",
+    "last": "2026-04-05",
+    "played": 0
+  },
+  "competition": {
+    "id": 2015,
+    "name": "Ligue 1",
+    "code": "FL1",
+    "emblem": "https://crests.football-data.org/FL1.png"
+  },
+  "days": [
+    {
+      "date": "2026-04-05",
+      "matches": [
+        {
+          "matchID": 542649,
+          "time": "01:00 AM",
+          "team1": "Le Havre",
+          "team2": "Auxerre",
+          "team1Id": 533,
+          "team2Id": 519,
+          "team1Logo": "https://crests.football-data.org/533.png",
+          "team2Logo": "https://crests.football-data.org/519.png",
+          "status": "scheduled",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 542650,
+          "time": "01:00 AM",
+          "team1": "Monaco",
+          "team2": "Marseille",
+          "team1Id": 548,
+          "team2Id": 516,
+          "team1Logo": "https://crests.football-data.org/548.png",
+          "team2Logo": "https://crests.football-data.org/516.png",
+          "status": "scheduled",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 542651,
+          "time": "01:00 AM",
+          "team1": "Lorient",
+          "team2": "Paris FC",
+          "team1Id": 525,
+          "team2Id": 1045,
+          "team1Logo": "https://crests.football-data.org/525.png",
+          "team2Logo": "https://crests.football-data.org/1045.png",
+          "status": "scheduled",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 542652,
+          "time": "01:00 AM",
+          "team1": "FC Metz",
+          "team2": "Nantes",
+          "team1Id": 545,
+          "team2Id": 543,
+          "team1Logo": "https://crests.football-data.org/545.png",
+          "team2Logo": "https://crests.football-data.org/543.png",
+          "status": "scheduled",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 542653,
+          "time": "01:00 AM",
+          "team1": "Lille",
+          "team2": "RC Lens",
+          "team1Id": 521,
+          "team2Id": 546,
+          "team1Logo": "https://crests.football-data.org/521.png",
+          "team2Logo": "https://crests.football-data.org/546.png",
+          "status": "scheduled",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 542654,
+          "time": "01:00 AM",
+          "team1": "PSG",
+          "team2": "Toulouse",
+          "team1Id": 524,
+          "team2Id": 511,
+          "team1Logo": "https://crests.football-data.org/524.png",
+          "team2Logo": "https://crests.football-data.org/511.png",
+          "status": "scheduled",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 542655,
+          "time": "01:00 AM",
+          "team1": "Strasbourg",
+          "team2": "Nice",
+          "team1Id": 576,
+          "team2Id": 522,
+          "team1Logo": "https://crests.football-data.org/576.png",
+          "team2Logo": "https://crests.football-data.org/522.png",
+          "status": "scheduled",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 542656,
+          "time": "01:00 AM",
+          "team1": "Angers SCO",
+          "team2": "Olympique Lyon",
+          "team1Id": 532,
+          "team2Id": 523,
+          "team1Logo": "https://crests.football-data.org/532.png",
+          "team2Logo": "https://crests.football-data.org/523.png",
+          "status": "scheduled",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 542657,
+          "time": "01:00 AM",
+          "team1": "Brest",
+          "team2": "Stade Rennais",
+          "team1Id": 512,
+          "team2Id": 529,
+          "team1Logo": "https://crests.football-data.org/512.png",
+          "team2Logo": "https://crests.football-data.org/529.png",
+          "status": "scheduled",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        }
+      ]
+    }
+  ]
+}

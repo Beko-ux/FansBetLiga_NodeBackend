@@ -1,0 +1,170 @@
+{
+  "league": "Bundesliga",
+  "leagueCode": "BL1",
+  "season": 2025,
+  "matchday": 7,
+  "resultSet": {
+    "count": 9,
+    "first": "2025-10-17",
+    "last": "2025-10-19",
+    "played": 0
+  },
+  "competition": {
+    "id": 2002,
+    "name": "Bundesliga",
+    "code": "BL1",
+    "emblem": "https://crests.football-data.org/BL1.png"
+  },
+  "days": [
+    {
+      "date": "2025-10-17",
+      "matches": [
+        {
+          "matchID": 540465,
+          "time": "07:30 PM",
+          "team1": "Union Berlin",
+          "team2": "M'gladbach",
+          "team1Id": 28,
+          "team2Id": 18,
+          "team1Logo": "https://crests.football-data.org/28.png",
+          "team2Logo": "https://crests.football-data.org/18.png",
+          "status": "timed",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        }
+      ]
+    },
+    {
+      "date": "2025-10-18",
+      "matches": [
+        {
+          "matchID": 540462,
+          "time": "02:30 PM",
+          "team1": "Mainz",
+          "team2": "Leverkusen",
+          "team1Id": 15,
+          "team2Id": 3,
+          "team1Logo": "https://crests.football-data.org/15.png",
+          "team2Logo": "https://crests.football-data.org/3.png",
+          "status": "timed",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 540463,
+          "time": "02:30 PM",
+          "team1": "RB Leipzig",
+          "team2": "HSV",
+          "team1Id": 721,
+          "team2Id": 7,
+          "team1Logo": "https://crests.football-data.org/721.png",
+          "team2Logo": "https://crests.football-data.org/7.png",
+          "status": "timed",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 540464,
+          "time": "02:30 PM",
+          "team1": "Wolfsburg",
+          "team2": "Stuttgart",
+          "team1Id": 11,
+          "team2Id": 10,
+          "team1Logo": "https://crests.football-data.org/11.png",
+          "team2Logo": "https://crests.football-data.org/10.png",
+          "status": "timed",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 540467,
+          "time": "02:30 PM",
+          "team1": "Heidenheim",
+          "team2": "Bremen",
+          "team1Id": 44,
+          "team2Id": 12,
+          "team1Logo": "https://crests.football-data.org/44.png",
+          "team2Logo": "https://crests.football-data.org/12.png",
+          "status": "timed",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 540468,
+          "time": "02:30 PM",
+          "team1": "1. FC Köln",
+          "team2": "Augsburg",
+          "team1Id": 1,
+          "team2Id": 16,
+          "team1Logo": "https://crests.football-data.org/1.png",
+          "team2Logo": "https://crests.football-data.org/16.png",
+          "status": "timed",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 540460,
+          "time": "05:30 PM",
+          "team1": "Bayern",
+          "team2": "Dortmund",
+          "team1Id": 5,
+          "team2Id": 4,
+          "team1Logo": "https://crests.football-data.org/5.png",
+          "team2Logo": "https://crests.football-data.org/4.png",
+          "status": "timed",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        }
+      ]
+    },
+    {
+      "date": "2025-10-19",
+      "matches": [
+        {
+          "matchID": 540461,
+          "time": "02:30 PM",
+          "team1": "Freiburg",
+          "team2": "Frankfurt",
+          "team1Id": 17,
+          "team2Id": 19,
+          "team1Logo": "https://crests.football-data.org/17.png",
+          "team2Logo": "https://crests.football-data.org/19.png",
+          "status": "timed",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        },
+        {
+          "matchID": 540466,
+          "time": "04:30 PM",
+          "team1": "St. Pauli",
+          "team2": "Hoffenheim",
+          "team1Id": 20,
+          "team2Id": 2,
+          "team1Logo": "https://crests.football-data.org/20.png",
+          "team2Logo": "https://crests.football-data.org/2.png",
+          "status": "timed",
+          "scoreA": null,
+          "scoreB": null,
+          "halfA": null,
+          "halfB": null
+        }
+      ]
+    }
+  ]
+}

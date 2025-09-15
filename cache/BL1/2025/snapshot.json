@@ -1,0 +1,349 @@
+{
+  "league": "BL1",
+  "season": 2025,
+  "byMatchday": {
+    "2": {
+      "finished": [
+        {
+          "matchID": "540423",
+          "date": "2025-08-29",
+          "time": "07:30 PM",
+          "team1": "HSV",
+          "team2": "St. Pauli",
+          "team1Logo": "https://crests.football-data.org/7.png",
+          "team2Logo": "https://crests.football-data.org/20.png",
+          "scoreA": 0,
+          "scoreB": 2,
+          "status": "finished"
+        },
+        {
+          "matchID": "540416",
+          "date": "2025-08-30",
+          "time": "02:30 PM",
+          "team1": "RB Leipzig",
+          "team2": "Heidenheim",
+          "team1Logo": "https://crests.football-data.org/721.png",
+          "team2Logo": "https://crests.football-data.org/44.png",
+          "scoreA": 2,
+          "scoreB": 0,
+          "status": "finished"
+        },
+        {
+          "matchID": "540417",
+          "date": "2025-08-30",
+          "time": "02:30 PM",
+          "team1": "Bremen",
+          "team2": "Leverkusen",
+          "team1Logo": "https://crests.football-data.org/12.png",
+          "team2Logo": "https://crests.football-data.org/3.png",
+          "scoreA": 3,
+          "scoreB": 3,
+          "status": "finished"
+        },
+        {
+          "matchID": "540418",
+          "date": "2025-08-30",
+          "time": "02:30 PM",
+          "team1": "Stuttgart",
+          "team2": "M'gladbach",
+          "team1Logo": "https://crests.football-data.org/10.png",
+          "team2Logo": "https://crests.football-data.org/18.png",
+          "scoreA": 1,
+          "scoreB": 0,
+          "status": "finished"
+        },
+        {
+          "matchID": "540421",
+          "date": "2025-08-30",
+          "time": "02:30 PM",
+          "team1": "Hoffenheim",
+          "team2": "Frankfurt",
+          "team1Logo": "https://crests.football-data.org/2.png",
+          "team2Logo": "https://crests.football-data.org/19.png",
+          "scoreA": 1,
+          "scoreB": 3,
+          "status": "finished"
+        },
+        {
+          "matchID": "540420",
+          "date": "2025-08-30",
+          "time": "05:30 PM",
+          "team1": "Augsburg",
+          "team2": "Bayern",
+          "team1Logo": "https://crests.football-data.org/16.png",
+          "team2Logo": "https://crests.football-data.org/5.png",
+          "scoreA": 2,
+          "scoreB": 3,
+          "status": "finished"
+        },
+        {
+          "matchID": "540419",
+          "date": "2025-08-31",
+          "time": "02:30 PM",
+          "team1": "Wolfsburg",
+          "team2": "Mainz",
+          "team1Logo": "https://crests.football-data.org/11.png",
+          "team2Logo": "https://crests.football-data.org/15.png",
+          "scoreA": 1,
+          "scoreB": 1,
+          "status": "finished"
+        },
+        {
+          "matchID": "540415",
+          "date": "2025-08-31",
+          "time": "04:30 PM",
+          "team1": "Dortmund",
+          "team2": "Union Berlin",
+          "team1Logo": "https://crests.football-data.org/4.png",
+          "team2Logo": "https://crests.football-data.org/28.png",
+          "scoreA": 3,
+          "scoreB": 0,
+          "status": "finished"
+        },
+        {
+          "matchID": "540422",
+          "date": "2025-08-31",
+          "time": "06:30 PM",
+          "team1": "1. FC Köln",
+          "team2": "Freiburg",
+          "team1Logo": "https://crests.football-data.org/1.png",
+          "team2Logo": "https://crests.football-data.org/17.png",
+          "scoreA": 4,
+          "scoreB": 1,
+          "status": "finished"
+        }
+      ],
+      "live": [],
+      "upcoming": []
+    },
+    "3": {
+      "finished": [
+        {
+          "matchID": "540425",
+          "date": "2025-09-12",
+          "time": "07:30 PM",
+          "team1": "Leverkusen",
+          "team2": "Frankfurt",
+          "team1Logo": "https://crests.football-data.org/3.png",
+          "team2Logo": "https://crests.football-data.org/19.png",
+          "scoreA": 3,
+          "scoreB": 1,
+          "status": "finished"
+        },
+        {
+          "matchID": "540426",
+          "date": "2025-09-13",
+          "time": "02:30 PM",
+          "team1": "Freiburg",
+          "team2": "Stuttgart",
+          "team1Logo": "https://crests.football-data.org/17.png",
+          "team2Logo": "https://crests.football-data.org/10.png",
+          "scoreA": 3,
+          "scoreB": 1,
+          "status": "finished"
+        },
+        {
+          "matchID": "540427",
+          "date": "2025-09-13",
+          "time": "02:30 PM",
+          "team1": "Mainz",
+          "team2": "RB Leipzig",
+          "team1Logo": "https://crests.football-data.org/15.png",
+          "team2Logo": "https://crests.football-data.org/721.png",
+          "scoreA": 0,
+          "scoreB": 1,
+          "status": "finished"
+        },
+        {
+          "matchID": "540429",
+          "date": "2025-09-13",
+          "time": "02:30 PM",
+          "team1": "Wolfsburg",
+          "team2": "1. FC Köln",
+          "team1Logo": "https://crests.football-data.org/11.png",
+          "team2Logo": "https://crests.football-data.org/1.png",
+          "scoreA": 3,
+          "scoreB": 3,
+          "status": "finished"
+        },
+        {
+          "matchID": "540430",
+          "date": "2025-09-13",
+          "time": "02:30 PM",
+          "team1": "Union Berlin",
+          "team2": "Hoffenheim",
+          "team1Logo": "https://crests.football-data.org/28.png",
+          "team2Logo": "https://crests.football-data.org/2.png",
+          "scoreA": 2,
+          "scoreB": 4,
+          "status": "finished"
+        },
+        {
+          "matchID": "540432",
+          "date": "2025-09-13",
+          "time": "02:30 PM",
+          "team1": "Heidenheim",
+          "team2": "Dortmund",
+          "team1Logo": "https://crests.football-data.org/44.png",
+          "team2Logo": "https://crests.football-data.org/4.png",
+          "scoreA": 0,
+          "scoreB": 2,
+          "status": "finished"
+        },
+        {
+          "matchID": "540424",
+          "date": "2025-09-13",
+          "time": "05:30 PM",
+          "team1": "Bayern",
+          "team2": "HSV",
+          "team1Logo": "https://crests.football-data.org/5.png",
+          "team2Logo": "https://crests.football-data.org/7.png",
+          "scoreA": 5,
+          "scoreB": 0,
+          "status": "finished"
+        },
+        {
+          "matchID": "540431",
+          "date": "2025-09-14",
+          "time": "02:30 PM",
+          "team1": "St. Pauli",
+          "team2": "Augsburg",
+          "team1Logo": "https://crests.football-data.org/20.png",
+          "team2Logo": "https://crests.football-data.org/16.png",
+          "scoreA": 2,
+          "scoreB": 1,
+          "status": "finished"
+        },
+        {
+          "matchID": "540428",
+          "date": "2025-09-14",
+          "time": "04:30 PM",
+          "team1": "M'gladbach",
+          "team2": "Bremen",
+          "team1Logo": "https://crests.football-data.org/18.png",
+          "team2Logo": "https://crests.football-data.org/12.png",
+          "scoreA": 0,
+          "scoreB": 4,
+          "status": "finished"
+        }
+      ],
+      "live": [],
+      "upcoming": []
+    },
+    "4": {
+      "finished": [],
+      "live": [],
+      "upcoming": [
+        {
+          "matchID": "540438",
+          "date": "2025-09-19",
+          "time": "07:30 PM",
+          "team1": "Stuttgart",
+          "team2": "St. Pauli",
+          "team1Logo": "https://crests.football-data.org/10.png",
+          "team2Logo": "https://crests.football-data.org/20.png",
+          "scoreA": null,
+          "scoreB": null,
+          "status": "timed"
+        },
+        {
+          "matchID": "540437",
+          "date": "2025-09-20",
+          "time": "02:30 PM",
+          "team1": "Bremen",
+          "team2": "Freiburg",
+          "team1Logo": "https://crests.football-data.org/12.png",
+          "team2Logo": "https://crests.football-data.org/17.png",
+          "scoreA": null,
+          "scoreB": null,
+          "status": "timed"
+        },
+        {
+          "matchID": "540439",
+          "date": "2025-09-20",
+          "time": "02:30 PM",
+          "team1": "Augsburg",
+          "team2": "Mainz",
+          "team1Logo": "https://crests.football-data.org/16.png",
+          "team2Logo": "https://crests.football-data.org/15.png",
+          "scoreA": null,
+          "scoreB": null,
+          "status": "timed"
+        },
+        {
+          "matchID": "540440",
+          "date": "2025-09-20",
+          "time": "02:30 PM",
+          "team1": "Hoffenheim",
+          "team2": "Bayern",
+          "team1Logo": "https://crests.football-data.org/2.png",
+          "team2Logo": "https://crests.football-data.org/5.png",
+          "scoreA": null,
+          "scoreB": null,
+          "status": "timed"
+        },
+        {
+          "matchID": "540441",
+          "date": "2025-09-20",
+          "time": "02:30 PM",
+          "team1": "HSV",
+          "team2": "Heidenheim",
+          "team1Logo": "https://crests.football-data.org/7.png",
+          "team2Logo": "https://crests.football-data.org/44.png",
+          "scoreA": null,
+          "scoreB": null,
+          "status": "timed"
+        },
+        {
+          "matchID": "540436",
+          "date": "2025-09-20",
+          "time": "05:30 PM",
+          "team1": "RB Leipzig",
+          "team2": "1. FC Köln",
+          "team1Logo": "https://crests.football-data.org/721.png",
+          "team2Logo": "https://crests.football-data.org/1.png",
+          "scoreA": null,
+          "scoreB": null,
+          "status": "timed"
+        },
+        {
+          "matchID": "540434",
+          "date": "2025-09-21",
+          "time": "02:30 PM",
+          "team1": "Frankfurt",
+          "team2": "Union Berlin",
+          "team1Logo": "https://crests.football-data.org/19.png",
+          "team2Logo": "https://crests.football-data.org/28.png",
+          "scoreA": null,
+          "scoreB": null,
+          "status": "timed"
+        },
+        {
+          "matchID": "540433",
+          "date": "2025-09-21",
+          "time": "04:30 PM",
+          "team1": "Leverkusen",
+          "team2": "M'gladbach",
+          "team1Logo": "https://crests.football-data.org/3.png",
+          "team2Logo": "https://crests.football-data.org/18.png",
+          "scoreA": null,
+          "scoreB": null,
+          "status": "timed"
+        },
+        {
+          "matchID": "540435",
+          "date": "2025-09-21",
+          "time": "06:30 PM",
+          "team1": "Dortmund",
+          "team2": "Wolfsburg",
+          "team1Logo": "https://crests.football-data.org/4.png",
+          "team2Logo": "https://crests.football-data.org/11.png",
+          "scoreA": null,
+          "scoreB": null,
+          "status": "timed"
+        }
+      ]
+    }
+  },
+  "updatedAt": "2025-09-15T19:25:52.003Z"
+}
