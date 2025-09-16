@@ -82,8 +82,22 @@ dotenv.config();
 
 const app = express();
 
-// Autorise l’origine de ton front (fallback: *)
-app.use(cors({ origin: process.env.CORS_ORIGIN || '*' }));
+// CORS: autoriser ton/tes domaines + entêtes nécessaires
+const origins = (process.env.CORS_ORIGIN || '*')
+  .split(',')
+  .map(s => s.trim())
+  .filter(Boolean);
+
+const corsOptions = {
+  origin: origins.length === 1 && origins[0] === '*' ? '*' : origins,
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: false, // pas de cookies
+};
+
+// CORS d'abord, pour que l'OPTIONS soit gérée avant tout
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 
 app.use(express.json());
 app.use(morgan('dev'));
@@ -110,7 +124,6 @@ const port = process.env.PORT || 3000;
 const server = app.listen(port, () => {
   console.log(`API listening on http://localhost:${port}`);
 
-  // Démarre le poller (désactive-le en mettant MATCH_POLL_ENABLED=0 si besoin)
   if (process.env.MATCH_POLL_ENABLED !== '0') {
     try {
       startMatchPoller();

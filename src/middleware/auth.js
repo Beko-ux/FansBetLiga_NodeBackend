@@ -17,9 +17,40 @@
 
 
 
+// import jwt from 'jsonwebtoken';
+
+// export function auth(req, res, next) {
+//   const raw = req.get('authorization') || '';
+//   const token = raw.replace(/^Bearer\s+/i, '').trim();
+
+//   if (!token) return res.status(401).json({ message: 'Unauthorized' });
+
+//   try {
+//     const payload = jwt.verify(token, process.env.JWT_SECRET, { algorithms: ['HS256'] });
+//     req.user = { id: payload.id, email: payload.email };
+//     return next();
+//   } catch (err) {
+//     // Utile pour debug (voir `docker compose logs -f api`)
+//     console.error('JWT verify error:', err.name, err.message);
+//     if (err.name === 'TokenExpiredError') {
+//       return res.status(401).json({ message: 'Token expired' });
+//     }
+//     return res.status(401).json({ message: 'Invalid token' });
+//   }
+// }
+
+
+
+
+// src/middleware/auth.js
 import jwt from 'jsonwebtoken';
 
 export function auth(req, res, next) {
+  // Laisser passer les préflights CORS (OPTIONS)
+  if (req.method === 'OPTIONS') {
+    return next();
+  }
+
   const raw = req.get('authorization') || '';
   const token = raw.replace(/^Bearer\s+/i, '').trim();
 
@@ -30,7 +61,6 @@ export function auth(req, res, next) {
     req.user = { id: payload.id, email: payload.email };
     return next();
   } catch (err) {
-    // Utile pour debug (voir `docker compose logs -f api`)
     console.error('JWT verify error:', err.name, err.message);
     if (err.name === 'TokenExpiredError') {
       return res.status(401).json({ message: 'Token expired' });
