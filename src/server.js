@@ -117,14 +117,13 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-app.options('*', cors(corsOptions)); // important: mêmes règles pour les préflights
+app.options('*', cors(corsOptions)); // mêmes règles pour les préflights
 
 app.use(express.json());
 app.use(morgan('dev'));
 
-// ---- Version endpoint (utilisé par le front pour le cache-bust) ----
+// ---- Version endpoint (utilisé par le front pour cache-bust/force logout) ----
 app.get('/api/version', (_req, res) => {
-  // essaie plusieurs sources d’ID de build, sinon "dev"
   const buildId =
     process.env.BUILD_ID ||
     process.env.VERCEL_GIT_COMMIT_SHA ||
