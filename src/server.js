@@ -107,16 +107,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 // src/server.js
 import express from 'express';
 import morgan from 'morgan';
@@ -128,10 +118,11 @@ dotenv.config();
 
 const app = express();
 
+// PAS de cors() ici, c'est Nginx qui gère
 app.use(express.json());
 app.use(morgan('dev'));
 
-// ---- Version endpoint (cache-bust/force logout) ----
+// Version (cache-bust)
 app.get('/api/version', (_req, res) => {
   const buildId =
     process.env.BUILD_ID ||
@@ -143,25 +134,24 @@ app.get('/api/version', (_req, res) => {
   res.json({ buildId });
 });
 
-// Routes API
+// API
 app.use('/api', router);
 
 // Healthchecks
 app.get('/health', (_req, res) => res.json({ ok: true }));
-app.get('/', (_req, res) => {
-  res.json({ message: 'Prediction App API is running' });
-});
+app.get('/', (_req, res) => res.json({ message: 'Prediction App API is running' }));
 
 // 404
 app.use((req, res) => res.status(404).json({ error: 'Not Found' }));
 
-// Error handler
+// Errors
 app.use((err, _req, res, _next) => {
   console.error(err);
   res.status(err.status || 500).json({ error: err.message || 'Internal Server Error' });
 });
 
-const port = process.env.PORT || 3000;
+// Écoute sur 3005 (ou PORT env)
+const port = process.env.PORT || 3005;
 const server = app.listen(port, () => {
   console.log(`API listening on http://localhost:${port}`);
 
@@ -174,7 +164,7 @@ const server = app.listen(port, () => {
   }
 });
 
-// Graceful shutdown
+// Shutdown propre
 const shutdown = async () => {
   console.log('Shutting down...');
   try { stopMatchPoller(); } catch {}
