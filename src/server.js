@@ -99,11 +99,6 @@ dotenv.config();
 
 const app = express();
 
-// ====== Versioning / build info ======
-const APP_VERSION = process.env.APP_VERSION || 'dev';
-const BUILD_ID = process.env.BUILD_ID || String(Date.now()); // change à chaque boot
-const BOOT_ISO = new Date().toISOString();
-
 // CORS explicite (gère aussi les pré-requêtes OPTIONS)
 const corsOrigins =
   (process.env.CORS_ORIGIN || '')
@@ -127,14 +122,17 @@ app.options('*', cors(corsOptions)); // important: mêmes règles pour les préf
 app.use(express.json());
 app.use(morgan('dev'));
 
-// ====== Version endpoint (no-store) ======
+// ---- Version endpoint (utilisé par le front pour le cache-bust) ----
 app.get('/api/version', (_req, res) => {
-  res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
-  res.json({
-    version: APP_VERSION,
-    buildId: BUILD_ID,
-    startedAt: BOOT_ISO,
-  });
+  // essaie plusieurs sources d’ID de build, sinon "dev"
+  const buildId =
+    process.env.BUILD_ID ||
+    process.env.VERCEL_GIT_COMMIT_SHA ||
+    process.env.HEROKU_SLUG_COMMIT ||
+    process.env.GIT_COMMIT ||
+    'dev';
+  res.setHeader('Cache-Control', 'no-store');
+  res.json({ buildId });
 });
 
 // Routes API
@@ -158,7 +156,6 @@ app.use((err, _req, res, _next) => {
 const port = process.env.PORT || 3000;
 const server = app.listen(port, () => {
   console.log(`API listening on http://localhost:${port}`);
-  console.log(`[version] APP_VERSION=${APP_VERSION} BUILD_ID=${BUILD_ID} STARTED_AT=${BOOT_ISO}`);
 
   if (process.env.MATCH_POLL_ENABLED !== '0') {
     try {
