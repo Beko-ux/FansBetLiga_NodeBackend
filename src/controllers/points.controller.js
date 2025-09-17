@@ -87,6 +87,7 @@
 
 
 
+// controllers/points.controller.js
 import { z } from 'zod';
 import { prisma } from '../prisma.js';
 import { zodToLaravelErrors } from '../utils/validation.js';
@@ -105,7 +106,7 @@ const StoreSchema = z.object({
   matchday: z.coerce.number().int().min(1),
   points: z.array(
     z.object({
-      matchID: z.string().min(1),
+      matchID: z.string().min(1), // ex: "544251"
       points: z.coerce.number().int(),
     })
   ),
@@ -118,7 +119,6 @@ export async function index(req, res) {
     if (!parsed.success) return res.status(422).json(zodToLaravelErrors(parsed.error));
 
     const { league, season, matchday } = parsed.data;
-
     const where = {
       userId,
       ...(league ? { league } : {}),
@@ -135,13 +135,10 @@ export async function index(req, res) {
 }
 
 export async function store(req, res) {
-  // Supporte body OU query pour league/season/matchday
   const parsed = StoreSchema.safeParse({
-    league: req.body.league ?? req.query.league,
-    season: req.body.season ?? req.query.season,
-    matchday: typeof (req.body.matchday ?? req.query.matchday) === 'string'
-      ? Number(req.body.matchday ?? req.query.matchday)
-      : (req.body.matchday ?? req.query.matchday),
+    league: req.body.league,
+    season: req.body.season,
+    matchday: typeof req.body.matchday === 'string' ? Number(req.body.matchday) : req.body.matchday,
     points: req.body.points,
   });
   if (!parsed.success) return res.status(422).json(zodToLaravelErrors(parsed.error));
@@ -152,9 +149,10 @@ export async function store(req, res) {
   try {
     const ops = points.map(({ matchID, points }) =>
       prisma.point.upsert({
+        // ⚠️ UTILISER le nom de la clé composée définie dans schema.prisma pour Point
+        // Exemple si tu as: @@unique([userId, league, season, matchday, matchId], name: "point_user_league_season_md_mid")
         where: {
-          // ✅ même contrainte composée (nom réel du schéma)
-          pred_user_league_season_md_mid: { userId, league, season, matchday, matchId: matchID },
+          point_user_league_season_md_mid: { userId, league, season, matchday, matchId: matchID },
         },
         update: { points },
         create: { userId, league, season, matchday, matchId: matchID, points },

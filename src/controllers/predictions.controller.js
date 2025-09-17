@@ -102,6 +102,7 @@
 
 
 
+// controllers/predictions.controller.js
 import { z } from 'zod';
 import { prisma } from '../prisma.js';
 import { zodToLaravelErrors } from '../utils/validation.js';
@@ -114,18 +115,16 @@ const QuerySchema = z.object({
   matchday: z.coerce.number().int().min(1),
 });
 
-const ScoreString = z.string().regex(/^\d+$/, 'Score must be digits only');
-
 const StoreSchema = z.object({
   league: LeagueEnum,
   season: z.coerce.number().int().min(2000),
   matchday: z.coerce.number().int().min(1),
   predictions: z.record(
     z.object({
-      team1Score: ScoreString,
-      team2Score: ScoreString,
+      team1Score: z.string().min(1),
+      team2Score: z.string().min(1),
     })
-  ).refine(obj => Object.keys(obj).length > 0, { message: 'No predictions to save' }),
+  ),
 });
 
 export async function index(req, res) {
@@ -133,7 +132,6 @@ export async function index(req, res) {
     const userId = req.user.id;
     const parsed = QuerySchema.safeParse(req.query);
     if (!parsed.success) return res.status(422).json(zodToLaravelErrors(parsed.error));
-
     const { league, season, matchday } = parsed.data;
 
     const rows = await prisma.prediction.findMany({
@@ -155,13 +153,10 @@ export async function index(req, res) {
 }
 
 export async function store(req, res) {
-  // Supporte body OU query pour league/season/matchday
   const parsed = StoreSchema.safeParse({
-    league: req.body.league ?? req.query.league,
-    season: req.body.season ?? req.query.season,
-    matchday: typeof (req.body.matchday ?? req.query.matchday) === 'string'
-      ? Number(req.body.matchday ?? req.query.matchday)
-      : (req.body.matchday ?? req.query.matchday),
+    league: req.body.league,
+    season: req.body.season,
+    matchday: typeof req.body.matchday === 'string' ? Number(req.body.matchday) : req.body.matchday,
     predictions: req.body.predictions,
   });
   if (!parsed.success) return res.status(422).json(zodToLaravelErrors(parsed.error));
@@ -173,14 +168,15 @@ export async function store(req, res) {
   const ops = [];
 
   for (const [matchId, data] of Object.entries(predictions)) {
-    const home = Number(data.team1Score);
-    const away = Number(data.team2Score);
+    const home = parseInt(data.team1Score, 10);
+    const away = parseInt(data.team2Score, 10);
 
+    // ⚠️ UTILISER la même clé que dans ton schema.prisma:
+    // @@unique([userId, league, season, matchday, matchId], name: "pred_user_league_season_md_mid")
     ops.push(
       prisma.prediction
         .upsert({
           where: {
-            // ✅ utiliser le NOM RÉEL de la contrainte unique composée
             pred_user_league_season_md_mid: { userId, league, season, matchday, matchId },
           },
           update: { team1Score: home, team2Score: away },
