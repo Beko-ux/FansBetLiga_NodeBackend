@@ -109,6 +109,7 @@
 
 // src/server.js
 import express from 'express';
+import cors from 'cors';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
 import router from './routes/index.js';
@@ -118,11 +119,41 @@ dotenv.config();
 
 const app = express();
 
-// PAS de cors() ici, c'est Nginx qui gère
+// ----- CORS -----
+const corsOrigins =
+  (process.env.CORS_ORIGIN || '')
+    .split(',')
+    .map(s => s.trim())
+    .filter(Boolean);
+
+const defaultOrigins = [
+  'https://fansbetliga.com',
+  'https://www.fansbetliga.com',
+  /^(http|https):\/\/localhost(:\d+)?$/ // dev
+];
+
+const corsOptions = {
+  origin: corsOrigins.length ? corsOrigins : defaultOrigins,
+  methods: ['GET','HEAD','POST','PUT','PATCH','DELETE','OPTIONS'],
+  allowedHeaders: ['Content-Type','Authorization','Accept','X-Requested-With'],
+  maxAge: 86400,
+};
+
+// Vary pour que le cache CDN tienne compte de l’Origin
+app.use((req, res, next) => {
+  res.setHeader('Vary', 'Origin');
+  next();
+});
+
+// ✅ NE PAS COMMENTER CES DEUX LIGNES
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions)); // les préflights répondent 204 automatiquement
+
+// ----- middlewares classiques -----
 app.use(express.json());
 app.use(morgan('dev'));
 
-// Version (cache-bust)
+// ----- Version endpoint -----
 app.get('/api/version', (_req, res) => {
   const buildId =
     process.env.BUILD_ID ||
@@ -134,7 +165,7 @@ app.get('/api/version', (_req, res) => {
   res.json({ buildId });
 });
 
-// API
+// ----- API -----
 app.use('/api', router);
 
 // Healthchecks
@@ -144,14 +175,13 @@ app.get('/', (_req, res) => res.json({ message: 'Prediction App API is running' 
 // 404
 app.use((req, res) => res.status(404).json({ error: 'Not Found' }));
 
-// Errors
+// Handler d’erreurs
 app.use((err, _req, res, _next) => {
   console.error(err);
   res.status(err.status || 500).json({ error: err.message || 'Internal Server Error' });
 });
 
-// Écoute sur 3005 (ou PORT env)
-const port = process.env.PORT || 3005;
+const port = process.env.PORT || 3000;
 const server = app.listen(port, () => {
   console.log(`API listening on http://localhost:${port}`);
 
@@ -164,7 +194,6 @@ const server = app.listen(port, () => {
   }
 });
 
-// Shutdown propre
 const shutdown = async () => {
   console.log('Shutting down...');
   try { stopMatchPoller(); } catch {}
