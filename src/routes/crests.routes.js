@@ -66,7 +66,6 @@
 
 
 
-// src/routes/crests.routes.js
 import { Router } from 'express';
 import axios from 'axios';
 
@@ -87,9 +86,8 @@ r.get('/:filename', async (req, res) => {
       (filename.endsWith('.svg') ? 'image/svg+xml' : 'image/png');
 
     res.setHeader('Content-Type', contentType);
-    // ❌ ne PAS mettre Access-Control-Allow-Origin ici (géré par cors() global)
+    // CORS géré globalement par app.use(cors(...))
     res.setHeader('Cache-Control', 'public, max-age=86400, immutable');
-    // (optionnel) pour éviter certains blocages d’image:
     res.setHeader('Cross-Origin-Resource-Policy', 'cross-origin');
 
     return res.status(200).send(Buffer.from(upstreamRes.data));
@@ -99,7 +97,6 @@ r.get('/:filename', async (req, res) => {
       'base64'
     );
     res.setHeader('Content-Type', 'image/gif');
-    // ❌ pas d’ACAO ici non plus
     res.setHeader('Cache-Control', 'no-store');
     res.setHeader('Cross-Origin-Resource-Policy', 'cross-origin');
     return res.status(200).send(onePx);
