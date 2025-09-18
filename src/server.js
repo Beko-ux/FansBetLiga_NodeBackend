@@ -120,34 +120,23 @@ dotenv.config();
 const app = express();
 
 // ----- CORS -----
-const corsOrigins =
-  (process.env.CORS_ORIGIN || '')
-    .split(',')
-    .map(s => s.trim())
-    .filter(Boolean);
-
-const defaultOrigins = [
-  'https://fansbetliga.com',
-  'https://www.fansbetliga.com',
-  /^(http|https):\/\/localhost(:\d+)?$/ // dev
-];
-
 const corsOptions = {
   origin: corsOrigins.length ? corsOrigins : defaultOrigins,
   methods: ['GET','HEAD','POST','PUT','PATCH','DELETE','OPTIONS'],
-  allowedHeaders: ['Content-Type','Authorization','Accept','X-Requested-With'],
-  maxAge: 86400,
+  // allowedHeaders:  <-- SUPPRIMER cette ligne pour laisser cors refléter
+  maxAge: 86400, // (debug: tu peux mettre 60 le temps des tests)
 };
 
-// Vary pour que le cache CDN tienne compte de l’Origin
+// Vary pour caches/CDN
 app.use((req, res, next) => {
-  res.setHeader('Vary', 'Origin');
+  res.setHeader('Vary', 'Origin, Access-Control-Request-Headers');
   next();
 });
 
-// ✅ NE PAS COMMENTER CES DEUX LIGNES
+// Ne pas commenter ces deux lignes
 app.use(cors(corsOptions));
-app.options('*', cors(corsOptions)); // les préflights répondent 204 automatiquement
+app.options('*', cors(corsOptions)); // 204 sur les préflights
+
 
 // ----- middlewares classiques -----
 app.use(express.json());
