@@ -2,6 +2,23 @@
 import { prisma } from '../prisma.js';
 
 /**
+ * Normalise en nombre ou null
+ */
+const toNum = (v) => {
+  if (v === null || v === undefined) return null;
+  const n = Number(v);
+  return Number.isFinite(n) ? n : null;
+};
+
+/**
+ * Résultat tri-état:
+ *  - 'A' : équipe A gagne
+ *  - 'B' : équipe B gagne
+ *  - 'D' : nul
+ */
+const outcome = (a, b) => (a === b ? 'D' : (a > b ? 'A' : 'B'));
+
+/**
  * Règles:
  *  - 3 pts : score exact
  *  - 2 pts : bonne tendance + bon écart (hors nul)
@@ -9,30 +26,38 @@ import { prisma } from '../prisma.js';
  *  - 0 pt  : résultat faux
  */
 export function calculateMatchPoints(predA, predB, scoreA, scoreB) {
-  const toNum = (v) => (v === null || v === undefined ? null : Number(v));
-  const pA = toNum(predA), pB = toNum(predB), sA = toNum(scoreA), sB = toNum(scoreB);
-  if ([pA, pB, sA, sB].some(v => !Number.isFinite(v))) return 0;
+  const pA = toNum(predA);
+  const pB = toNum(predB);
+  const sA = toNum(scoreA);
+  const sB = toNum(scoreB);
 
+  if ([pA, pB, sA, sB].some(v => v === null)) return 0;
+
+  // 3 pts : exact
   if (pA === sA && pB === sB) return 3;
 
-  const isDraw = sA === sB;
-  const predIsDraw = pA === pB;
-  if (isDraw) return predIsDraw ? 1 : 0;
+  const real = outcome(sA, sB);
+  const pred = outcome(pA, pB);
 
-  const realAWin = sA > sB;
-  const predAWin = pA > pB;
-  if (realAWin !== predAWin) return 0;
+  // Cas nul
+  if (real === 'D') return pred === 'D' ? 1 : 0;
 
-  const realDiff = Math.abs(sA - sB);
-  const predDiff = Math.abs(pA - pB);
-  if (predDiff === realDiff) return 2;
-  return 1;
+  // Si prédiction = nul mais résultat = victoire -> 0
+  if (pred === 'D') return 0;
+
+  // Même vainqueur (A ou B)
+  if (real === pred) {
+    const realDiff = Math.abs(sA - sB);
+    const predDiff = Math.abs(pA - pB);
+    return predDiff === realDiff ? 2 : 1;
+  }
+
+  return 0;
 }
 
 /**
  * Recalcule toutes les lignes de `Point` pour (league, season, matchday)
- * à partir des Predictions et Results existants.
- * Idempotent via upsert.
+ * à partir des Predictions et Results existants. Idempotent via upsert.
  */
 export async function recomputePointsForMatchday({ league, season, matchday }) {
   // 1) Résultats de la journée
@@ -47,12 +72,7 @@ export async function recomputePointsForMatchday({ league, season, matchday }) {
   // 2) Toutes les prédictions des users pour cette journée
   const preds = await prisma.prediction.findMany({
     where: { league, season, matchday },
-    select: {
-      userId: true,
-      matchId: true,
-      team1Score: true,
-      team2Score: true,
-    },
+    select: { userId: true, matchId: true, team1Score: true, team2Score: true },
   });
   if (preds.length === 0) return { updated: 0 };
 
