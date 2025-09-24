@@ -162,7 +162,7 @@ export async function index(req, res) {
 }
 
 export async function store(req, res) {
-  // On coerce / valide tout le payload
+  // Coercion/validation de tout le payload
   const parsed = StoreSchema.safeParse({
     league: req.body.league,
     season: req.body.season,
@@ -178,7 +178,7 @@ export async function store(req, res) {
   const ops = [];
 
   for (const [matchId, data] of Object.entries(predictions)) {
-    const home = data.team1Score; // déjà coerce en int >= 0
+    const home = data.team1Score; // déjà coerced en int >= 0
     const away = data.team2Score;
 
     // @@unique([userId, league, season, matchday, matchId], name: "pred_user_league_season_md_mid")
@@ -203,27 +203,27 @@ export async function store(req, res) {
   try {
     await Promise.all(ops);
 
-    // ➜ recalcul backend automatique (idempotent)
+    // ➜ recalcul backend automatique et idempotent (pas besoin de vider Point)
     let recomputedPoints = 0;
     try {
-      const resu = await recomputePointsForMatchday({ league, season, matchday });
-      recomputedPoints = resu?.updated ?? 0;
+      const out = await recomputePointsForMatchday({ league, season, matchday });
+      recomputedPoints = out?.updated ?? 0;
     } catch (err) {
-      // On ne bloque pas l’enregistrement des prédictions si le recalcul échoue
+      // On ne bloque pas l’enregistrement si le recalcul échoue
       console.error('recomputePointsForMatchday failed:', err?.message || err);
     }
 
     return res.json({
       message: 'Predictions saved successfully',
       predictions: saved,
-      recomputedPoints, // nb de lignes Point upsertées
+      recomputedPoints, // nb de lignes Point upsertées pour cette journée
     });
   } catch (e) {
     return res.status(500).json({ message: 'Error saving predictions', error: e.message });
   }
 }
 
-// Alias batch
+// Alias batch si tu en as besoin
 export async function storeBatch(req, res) {
   return store(req, res);
 }
