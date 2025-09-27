@@ -127,8 +127,16 @@ export async function index(req, res) {
     };
 
     const rows = await prisma.point.findMany({ where });
-    const out = rows.map((r) => ({ matchID: r.matchId, points: r.points }));
-    return res.json({ points: out });
+    // expose 'matchId' (camelCase) ET 'matchID' (legacy)
+    const out = rows.map((r) => ({
+      matchId: String(r.matchId),
+      matchID: String(r.matchId),
+      league: r.league,
+      season: r.season,
+      matchday: r.matchday,
+      points: r.points,
+    }));
+    return res.json({ points: out, meta: { count: out.length } });
   } catch (e) {
     return res.status(500).json({ message: 'Error fetching points', error: e.message });
   }
@@ -149,8 +157,6 @@ export async function store(req, res) {
   try {
     const ops = points.map(({ matchID, points }) =>
       prisma.point.upsert({
-        // ⚠️ UTILISER le nom de la clé composée définie dans schema.prisma pour Point
-        // Exemple si tu as: @@unique([userId, league, season, matchday, matchId], name: "point_user_league_season_md_mid")
         where: {
           point_user_league_season_md_mid: { userId, league, season, matchday, matchId: matchID },
         },
